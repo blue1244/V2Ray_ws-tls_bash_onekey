@@ -429,9 +429,9 @@ ssl_install() {
     if [[ "${ID}" == "centos" ]]; then
         ${INS} install socat nc -y
 	elif [[ "${ID}" == "debian" && ${VERSION_ID} -ge 12 ]]; then
-		${INS} install socat netcat-openbsd -y
+		${INS} install socat nc-openbsd -y
     else
-        ${INS} install socat netcat -y
+        ${INS} install socat nc -y
     fi
     judge "安装 SSL 证书生成脚本依赖"
 
